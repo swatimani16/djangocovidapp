@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Info Live</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+</head>
+<body style="background-image: url('https://bloximages.newyork1.vip.townnews.com/bendbulletin.com/content/tncms/assets/v3/editorial/0/d6/0d6045b2-6adf-11ea-9afb-a790f3ea8264/5e75165eaca29.image.jpg?resize=750%2C500')"> 
+    <div >
+        <div class="container">
+            <h1 style="color: rgb(36, 133, 117); text-align:center;">COVID-19 Live Tracker</h1>
+            <br><br>
+            <div class="row">
+              <div class="col-sm">
+                <h4 style="color:violet"><strong>Countrywise Total affected LineChart Statistics</strong></h4>
+                {{data1|safe}}
+              </div>
+              <div class="col-sm">
+                <h4 style="color:violet;"><strong>Countrywise Total Affected BarChart Statistics</strong></h4>
+                <img src = "data:image/png;base64,{{ data }}" class="rounded mx-auto d-block col-md-12 alt = "No image", height = "400" width="1500">
+              </div>
+            </div>
+          </div>
+          <br><br>
+        <div class="container">
+        <a class="col-md-4 col-md-offset-4"><strong><i style="color:rgb(13, 173, 147); font-size:20px;">Choose the country whose Covid Statistics you want to View: </i></strong></a>
+        <form action="{% url 'search'%}" method="get">
+            <div class="row justify-content-center">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name = 'search'><br>
+            <input class="btn btn-outline-success my-2 my-sm-0" type="submit"></input>
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    <br>
+    <footer>
+        <div class="text-center">
+            <p class="bg-light"> Developed by <a href="https://swatimani16.github.io/reactportfolio/">Swati Mani</a> .</p>
+        </div>
+        
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
