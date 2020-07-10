@@ -79,15 +79,15 @@ def search(request):
     )]
     #BarGraph
     fig = go.Figure(data=data)
-    graph = fig.to_html(full_html=False, default_height=500, default_width=300)
+    graph = fig.to_html(full_html=False)
 
     #LineGraph
     fig1 = go.Figure(data=go.Scatter(x=l, y=v))
-    graph1 = fig1.to_html(full_html=False, default_height=500, default_width=300)
+    graph1 = fig1.to_html(full_html=False)
 
     #PieCHart
     fig2 = go.Figure(data=[go.Pie(labels=l, values=v)])
-    graph2 = fig2.to_html(full_html=False, default_height=500, default_width=300)
+    graph2 = fig2.to_html(full_html=False)
 
 
     context = {
