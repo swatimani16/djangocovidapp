@@ -87,7 +87,7 @@ def search(request):
 
     #PieCHart
     fig2 = go.Figure(data=[go.Pie(labels=l, values=v)])
-    graph2 = fig2.to_html(full_html=False, default_height=500, default_width=700)
+    graph2 = fig2.to_html(full_html=False, default_height=500, default_width=300)
 
 
     context = {
